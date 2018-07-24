@@ -1,0 +1,37 @@
+reference:
+  - title: "Load molecules"
+    desc: >
+      Read or parse SMILES, SDF, or MOL files or strings.
+    contents:
+      - read_smiles
+      - read_sdf
+      - parse_smiles
+      - parse_sdf
+      - print.tidymol
+  - title: "Calculate molecular fingerprints"
+    desc: >
+      Compute molecular fingerprints.
+    contents:
+      - fp_morgan
+      - fp_maccs
+      - fp_rdkit
+      - fp_atompair
+      - fp_torsion
+      - fp_pharm2d
+      - print.tidyfps
+  - title: "Calculate molecular descriptors"
+    desc: >
+      Compute 2D/3D molecular descriptors.
+    contents:
+      - desc_2d
+      - desc_3d
+      - get_alldesc_2d
+      - print.tidydesc
+  - title: "Utility functions"
+    desc: >
+      Utility functions.
+    contents:
+      - tidychem-package
+      - tidychem_example
+      - rdkit_version
+      - rdkit

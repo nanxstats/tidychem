@@ -63,3 +63,12 @@ get_fp_pharm2d <- function(mol, type) {
   }
   fp
 }
+
+get_fp_erg <- function(mol)
+  rdkit$Chem$rdReducedGraphs$GetErGFingerprint(mol)
+
+get_fp_pattern <- function(mol, explicit) {
+  fp <- rdkit$Chem$PatternFingerprint(mol)
+  if (explicit) fp <- fp_to_array(fp)
+  fp
+}

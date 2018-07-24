@@ -18,6 +18,8 @@ reference:
       - fp_atompair
       - fp_torsion
       - fp_pharm2d
+      - fp_erg
+      - fp_pattern
       - print.tidyfps
   - title: "Calculate molecular descriptors"
     desc: >

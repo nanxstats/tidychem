@@ -212,6 +212,63 @@ fp_pharm2d <- function(mols, type = c("default", "gobbi")) {
   fps
 }
 
-# TODO:
-# rdkit$Chem$rdReducedGraphs$GetErGFingerprint
-# rdkit$Chem$PatternFingerprint
+#' Compute extended reduced graphs fingerprints.
+#'
+#' Compute extended reduced graphs fingerprints
+#' derived from the ErG fingerprint.
+#'
+#' @param mols A \code{tidymol} object.
+#'
+#' @author Nan Xiao <\url{https://nanx.me}>
+#'
+#' @export fp_erg
+#'
+#' @examples
+#' \dontrun{
+#'
+#' mol <- parse_smiles("Cc1ccccc1")
+#' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
+#'
+#' fp_erg(mol)
+#' fp_erg(mols)
+#' }
+
+fp_erg <- function(mols) {
+  fps <- sapply(mols, get_fp_erg)
+  fps <- t(fps)
+  class(fps) <- c(class(fps), "tidyfps")
+  fps
+}
+
+#' Compute pattern fingerprints.
+#'
+#' Compute pattern fingerprints, a topological fingerprint
+#' optimized for substructure screening.
+#'
+#' @param mols A \code{tidymol} object.
+#' @param explicit Return the fingerprints as a vector or matrix?
+#' Default is \code{FALSE}.
+#'
+#' @author Nan Xiao <\url{https://nanx.me}>
+#'
+#' @export fp_pattern
+#'
+#' @examples
+#' \dontrun{
+#'
+#' mol <- parse_smiles("Cc1ccccc1")
+#' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
+#'
+#' fp_pattern(mol)
+#' fp_pattern(mols)
+#'
+#' fp_pattern(mol, explicit = TRUE)
+#' fp_pattern(mols, explicit = TRUE)
+#' }
+
+fp_pattern <- function(mols, explicit = FALSE) {
+  fps <- sapply(mols, get_fp_pattern, explicit)
+  if (explicit) fps <- t(fps)
+  class(fps) <- c(class(fps), "tidyfps")
+  fps
+}

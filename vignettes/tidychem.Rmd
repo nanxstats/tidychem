@@ -20,6 +20,44 @@ The `tidychem` package ...
 
 Let's load the package:
 
-```{r}
+```{r,eval=FALSE}
 library("tidychem")
+library("magrittr")
+library("readr")
+```
+
+```{r,eval=FALSE}
+mols <- "smi-multiple.smi" %>% tidychem_example %>% read_smiles
+
+# ECFP4
+mols %>% fp_morgan
+
+# similarity
+# mols %>% fp_morgan %>% sim_tanimoto
+
+# matrix
+mols %>% fp_morgan(explicit = TRUE)
+```
+
+```{r,eval=FALSE}
+df <- "logd74.tsv" %>% tidychem_example %>% read_tsv
+y <- df$logD7.4
+mols <- df$SMILES %>% parse_smiles
+mols
+
+# matrix of 2D/3D descriptors
+x <- mols %>% desc_2d
+x
+x[which(is.na(x))] <- 0
+```
+
+```{r,eval=FALSE}
+library("glmnet")
+
+cvfit = cv.glmnet(x, y)
+plot(cvfit)
+
+fit <- glmnet(x, y)
+plot(fit)
+head(coef(fit, s = cvfit$lambda.min, exact = TRUE), n = 30)
 ```

@@ -29,6 +29,11 @@ reference:
       - desc_3d
       - get_alldesc_2d
       - print.tidydesc
+  - title: "Calculate fingerprint similarity"
+    desc: >
+      Compute molecular fingerprint similarities.
+    contents:
+      - sim
   - title: "Utility functions"
     desc: >
       Utility functions.

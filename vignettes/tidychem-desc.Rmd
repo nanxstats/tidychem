@@ -1,0 +1,35 @@
+---
+title: "Calculate chemical descriptors with tidychem"
+author: "Nan Xiao <<https://nanx.me>>"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+    css: tidychem.css
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Calculate chemical descriptors with tidychem}
+---
+
+# Descriptors
+
+Let's load the package:
+
+```{r,eval=FALSE}
+library("tidychem")
+library("magrittr")
+library("readr")
+```
+
+# Regression example
+
+logd1k dataset.
+
+# 2D descriptors
+
+# 3D descriptors
+
+The 3D follow a common workflow: 3D formance -> descriptor...
+
+If already optimized with 3D coordinates, just load them with parse_sdf or read_sdf directly, then compute the 3D descriptors with the vanilla option.

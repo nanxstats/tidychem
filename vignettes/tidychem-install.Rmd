@@ -1,0 +1,19 @@
+---
+title: "Install RDKit and tidychem"
+author: "Nan Xiao <<https://nanx.me>>"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+    css: tidychem.css
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Install RDKit and tidychem}
+---
+
+# Title
+
+Install under Linux, Mac, Windows.
+
+Test method to see if correctly installed.

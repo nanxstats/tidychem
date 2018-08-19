@@ -1,0 +1,31 @@
+---
+title: "Load, parse, and write chemical data with tidychem"
+author: "Nan Xiao <<https://nanx.me>>"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+    css: tidychem.css
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Load, parse, and write chemical data with tidychem}
+---
+
+# Chemical data format intro -- SMI and SDF/MOL
+
+Let's load the package:
+
+```{r,eval=FALSE}
+library("tidychem")
+library("magrittr")
+library("readr")
+```
+
+## Reading
+
+## Parsing
+
+error handling example -- will be NULL.
+
+## Writing

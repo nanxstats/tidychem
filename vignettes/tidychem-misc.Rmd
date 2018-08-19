@@ -1,0 +1,39 @@
+---
+title: "Molecule operations with tidychem"
+author: "Nan Xiao <<https://nanx.me>>"
+date: "`r Sys.Date()`"
+output:
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+    css: tidychem.css
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Molecule operations with tidychem}
+---
+
+# Basic information of molecules
+
+# Modify molecules
+
+## Add hydrogen
+
+Let's load the package:
+
+```{r,eval=FALSE}
+library("tidychem")
+library("magrittr")
+library("readr")
+```
+
+## Kekulize
+
+# Substructure Searching
+
+# Maximum Common Substructure
+
+# Draw molecules
+
+# Similarity maps
+
+# etc.

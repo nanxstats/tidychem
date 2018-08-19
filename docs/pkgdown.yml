@@ -1,6 +1,11 @@
-pandoc: 2.2.2.1
+pandoc: 2.2.3.2
 pkgdown: 1.1.0
 pkgdown_sha: ~
 articles:
+  tidychem-desc: tidychem-desc.html
+  tidychem-fp: tidychem-fp.html
+  tidychem-install: tidychem-install.html
+  tidychem-io: tidychem-io.html
+  tidychem-misc: tidychem-misc.html
   tidychem: tidychem.html
 

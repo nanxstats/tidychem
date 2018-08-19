@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Gentle Introduction to tidychem • tidychem</title>
+<title>Load, parse, and write chemical data with tidychem • tidychem</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="A Gentle Introduction to tidychem">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Load, parse, and write chemical data with tidychem">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -94,57 +94,38 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>A Gentle Introduction to tidychem</h1>
+      <h1>Load, parse, and write chemical data with tidychem</h1>
                         <h4 class="author">Nan Xiao &lt;<a href="https://nanx.me" class="uri">https://nanx.me</a>&gt;</h4>
             
             <h4 class="date">2018-08-19</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/road2stat/tidychem//blob/master/vignettes/tidychem.Rmd"><code>vignettes/tidychem.Rmd</code></a></small>
-      <div class="hidden name"><code>tidychem.Rmd</code></div>
+      <small class="dont-index">Source: <a href="https://github.com/road2stat/tidychem//blob/master/vignettes/tidychem-io.Rmd"><code>vignettes/tidychem-io.Rmd</code></a></small>
+      <div class="hidden name"><code>tidychem-io.Rmd</code></div>
 
     </div>
 
     
     
-<div id="introduction" class="section level1">
+<div id="chemical-data-format-intro-smi-and-sdfmol" class="section level1">
 <h1 class="hasAnchor">
-<a href="#introduction" class="anchor"></a>Introduction</h1>
-<p>The <code>tidychem</code> package …</p>
-</div>
-<div id="walkthrough" class="section level1">
-<h1 class="hasAnchor">
-<a href="#walkthrough" class="anchor"></a>Walkthrough</h1>
+<a href="#chemical-data-format-intro-smi-and-sdfmol" class="anchor"></a>Chemical data format intro – SMI and SDF/MOL</h1>
 <p>Let’s load the package:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"tidychem"</span>)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(<span class="st">"magrittr"</span>)</a>
 <a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">library</span>(<span class="st">"readr"</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">mols &lt;-<span class="st"> "smi-multiple.smi"</span> <span class="op">%&gt;%</span><span class="st"> </span>tidychem_example <span class="op">%&gt;%</span><span class="st"> </span>read_smiles</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co"># ECFP4</span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">mols <span class="op">%&gt;%</span><span class="st"> </span>fp_morgan</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co"># similarity</span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co"># mols %&gt;% fp_morgan %&gt;% sim_tanimoto</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co"># matrix</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10">mols <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="../reference/fp_morgan.html">fp_morgan</a></span>(<span class="dt">explicit =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">df &lt;-<span class="st"> "logd74.tsv"</span> <span class="op">%&gt;%</span><span class="st"> </span>tidychem_example <span class="op">%&gt;%</span><span class="st"> </span>read_tsv</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">y &lt;-<span class="st"> </span>df<span class="op">$</span>logD7<span class="fl">.4</span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">mols &lt;-<span class="st"> </span>df<span class="op">$</span>SMILES <span class="op">%&gt;%</span><span class="st"> </span>parse_smiles</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4">mols</a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co"># matrix of 2D/3D descriptors</span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">x &lt;-<span class="st"> </span>mols <span class="op">%&gt;%</span><span class="st"> </span>desc_2d</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8">x</a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">x[<span class="kw">which</span>(<span class="kw">is.na</span>(x))] &lt;-<span class="st"> </span><span class="dv">0</span></a></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"glmnet"</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">cvfit =<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/glmnet/topics/cv.glmnet">cv.glmnet</a></span>(x, y)</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw">plot</span>(cvfit)</a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">fit &lt;-<span class="st"> </span><span class="kw"><a href="http://www.rdocumentation.org/packages/glmnet/topics/glmnet">glmnet</a></span>(x, y)</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="kw">plot</span>(fit)</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="kw">head</span>(<span class="kw">coef</span>(fit, <span class="dt">s =</span> cvfit<span class="op">$</span>lambda.min, <span class="dt">exact =</span> <span class="ot">TRUE</span>), <span class="dt">n =</span> <span class="dv">30</span>)</a></code></pre></div>
+<div id="reading" class="section level2">
+<h2 class="hasAnchor">
+<a href="#reading" class="anchor"></a>Reading</h2>
+</div>
+<div id="parsing" class="section level2">
+<h2 class="hasAnchor">
+<a href="#parsing" class="anchor"></a>Parsing</h2>
+<p>error handling example – will be NULL.</p>
+</div>
+<div id="writing" class="section level2">
+<h2 class="hasAnchor">
+<a href="#writing" class="anchor"></a>Writing</h2>
+</div>
 </div>
   </div>
 
@@ -153,8 +134,13 @@
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#introduction">Introduction</a></li>
-      <li><a href="#walkthrough">Walkthrough</a></li>
+<li>
+<a href="#chemical-data-format-intro-smi-and-sdfmol">Chemical data format intro – SMI and SDF/MOL</a><ul class="nav nav-pills nav-stacked">
+<li><a href="#reading">Reading</a></li>
+      <li><a href="#parsing">Parsing</a></li>
+      <li><a href="#writing">Writing</a></li>
+      </ul>
+</li>
       </ul>
 </div>
       </div>

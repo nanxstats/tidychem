@@ -1,4 +1,4 @@
-#' Tidy and Featurize Chemical Data using 'RDKit'
+#' Cheminformatics Toolkit with Tidy Data Principles
 #'
 #' Read, preprocess, and featurize chemical data using 'RDKit'.
 #' Offers a digested, functional, tidyverse-style interface.

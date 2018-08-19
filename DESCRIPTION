@@ -1,12 +1,12 @@
 Package: tidychem
 Type: Package
-Title: Tidy and Featurize Chemical Data using 'RDKit'
+Title: Cheminformatics Toolkit with Tidy Data Principles
 Version: 0.1.0
 Authors@R: c(person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-0250-5673")))
 Maintainer: Nan Xiao <me@nanx.me>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Read, preprocess, and featurize chemical data using 'RDKit'.
+    Offers a digested, functional, tidyverse-style interface.
 License: BSD_3_clause + file LICENSE
 VignetteBuilder: knitr
 URL: https://nanx.me/tidychem/, https://github.com/road2stat/tidychem/
@@ -23,4 +23,4 @@ Imports:
 Suggests:
     knitr,
     rmarkdown
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.1.0

@@ -3,7 +3,7 @@
 \docType{package}
 \name{tidychem-package}
 \alias{tidychem-package}
-\title{Tidy and Featurize Chemical Data using 'RDKit'}
+\title{Cheminformatics Toolkit with Tidy Data Principles}
 \description{
 Read, preprocess, and featurize chemical data using 'RDKit'.
 Offers a digested, functional, tidyverse-style interface.

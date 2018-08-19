@@ -1,5 +1,5 @@
 ---
-title: "A Quick Introduction to tidychem"
+title: "A Gentle Introduction to tidychem"
 author: "Nan Xiao <<https://nanx.me>>"
 date: "`r Sys.Date()`"
 output:

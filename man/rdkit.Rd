@@ -3,12 +3,12 @@
 \docType{data}
 \name{rdkit}
 \alias{rdkit}
-\title{Global reference to rdkit.}
+\title{Global reference to RDKit.}
 \format{An object of class \code{python.builtin.module} (inherits from \code{python.builtin.object}) of length 2.}
 \usage{
 rdkit
 }
 \description{
-Global reference to rdkit which will be initialized in \code{.onLoad}.
+Global reference to RDKit which will be initialized in \code{.onLoad}.
 }
 \keyword{datasets}

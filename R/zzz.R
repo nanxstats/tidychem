@@ -1,6 +1,6 @@
-#' Global reference to rdkit.
+#' Global reference to RDKit.
 #'
-#' Global reference to rdkit which will be initialized in \code{.onLoad}.
+#' Global reference to RDKit which will be initialized in \code{.onLoad}.
 #'
 #' @importFrom reticulate import
 #'

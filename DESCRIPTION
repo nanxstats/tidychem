@@ -1,16 +1,15 @@
 Package: tidychem
 Type: Package
-Title: Cheminformatics Toolkit with Tidy Data Principles
+Title: Tidy Chemical Data
 Version: 0.1.0
 Authors@R: c(person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-0250-5673")))
 Maintainer: Nan Xiao <me@nanx.me>
 Description: Read, preprocess, and featurize chemical data using 'RDKit'.
-    Offers a digested, functional, tidyverse-style interface.
-License: BSD_3_clause + file LICENSE
+License: GPL-3
 VignetteBuilder: knitr
-URL: https://nanx.me/tidychem/, https://github.com/road2stat/tidychem/
-BugReports: https://github.com/road2stat/tidychem/issues
+URL: https://nanx.me/tidychem/, https://github.com/nanxstats/tidychem/
+BugReports: https://github.com/nanxstats/tidychem/issues
 Encoding: UTF-8
 LazyData: true
 Imports:
@@ -23,4 +22,4 @@ Imports:
 Suggests:
     knitr,
     rmarkdown
-RoxygenNote: 6.1.0
+RoxygenNote: 7.1.0

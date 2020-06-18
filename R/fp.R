@@ -1,4 +1,4 @@
-#' Compute RDKit fingerprints.
+#' Compute RDKit fingerprints
 #'
 #' Compute the Daylight-like fingerprint based on
 #' hashing molecular subgraphs defined by RDKit.
@@ -6,8 +6,6 @@
 #' @param mols A \code{tidymol} object.
 #' @param explicit Return the fingerprints as a vector or matrix?
 #' Default is \code{FALSE}.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export fp_rdkit
 #'
@@ -32,15 +30,11 @@ fp_rdkit <- function(mols, explicit = FALSE) {
   fps
 }
 
-#' Compute MACCS keys.
-#'
-#' Compute the MACCS keys as molecular fingerprints.
+#' Compute MACCS keys as molecular fingerprints
 #'
 #' @param mols A \code{tidymol} object.
 #' @param explicit Return the fingerprints as a vector or matrix?
 #' Default is \code{FALSE}.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export fp_maccs
 #'
@@ -65,13 +59,9 @@ fp_maccs <- function(mols, explicit = FALSE) {
   fps
 }
 
-#' Compute atom pairs fingerprints.
-#'
-#' Compute atom pairs fingerprints.
+#' Compute atom pairs fingerprints
 #'
 #' @param mols A \code{tidymol} object.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @note The vectorized version of this fingerprint has a dimensionality
 #' of millions, which is usually considered too high for direct
@@ -98,11 +88,7 @@ fp_atompair <- function(mols) {
 
 #' Compute topological torsions fingerprints.
 #'
-#' Compute topological torsions fingerprints.
-#'
 #' @param mols A \code{tidymol} object.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @note The vectorized version of this fingerprint has a dimensionality
 #' of millions, which is usually considered too high for direct
@@ -129,8 +115,6 @@ fp_torsion <- function(mols) {
 
 #' Compute Morgan fingerprints (circular fingerprints).
 #'
-#' Compute Morgan fingerprints (circular fingerprints).
-#'
 #' @param mols A \code{tidymol} object.
 #' @param radius The radius parameter for Morgan fingerprints.
 #' \code{radius = 2} is roughly equivalent to ECFP4 and FCFP4.
@@ -140,8 +124,6 @@ fp_torsion <- function(mols) {
 #' connectivity information similar to those used for the ECFP fingerprints.
 #' @param explicit Return the fingerprints as a vector or matrix?
 #' Default is \code{FALSE}.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export fp_morgan
 #'
@@ -181,14 +163,10 @@ fp_morgan <- function(mols, radius = 2L, use_features = FALSE, explicit = FALSE)
 
 #' Compute 2D pharmacophore fingerprints.
 #'
-#' Compute 2D pharmacophore fingerprints.
-#'
 #' @param mols A \code{tidymol} object.
 #' @param type Type of the fingerprint. \code{"default"} uses
 #' the chemical features defined by RDKit, \code{"gobbi"} uses
 #' the set of chemical features feature defined by Gobbi and Poppinger (1998).
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export fp_pharm2d
 #'
@@ -212,14 +190,9 @@ fp_pharm2d <- function(mols, type = c("default", "gobbi")) {
   fps
 }
 
-#' Compute extended reduced graphs fingerprints.
-#'
-#' Compute extended reduced graphs fingerprints
-#' derived from the ErG fingerprint.
+#' Compute extended reduced graphs fingerprints derived from the ErG fingerprint
 #'
 #' @param mols A \code{tidymol} object.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export fp_erg
 #'
@@ -240,16 +213,11 @@ fp_erg <- function(mols) {
   fps
 }
 
-#' Compute pattern fingerprints.
-#'
-#' Compute pattern fingerprints, a topological fingerprint
-#' optimized for substructure screening.
+#' Compute pattern fingerprints, a topological fingerprint optimized for substructure screening
 #'
 #' @param mols A \code{tidymol} object.
 #' @param explicit Return the fingerprints as a vector or matrix?
 #' Default is \code{FALSE}.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export fp_pattern
 #'

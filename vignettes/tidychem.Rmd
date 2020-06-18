@@ -1,15 +1,15 @@
 ---
-title: "A Gentle Introduction to tidychem"
+title: "Tidy Chemical Data"
 author: "Nan Xiao <<https://nanx.me>>"
 date: "`r Sys.Date()`"
 output:
   rmarkdown::html_vignette:
     toc: true
     number_sections: true
-    css: tidychem.css
+    css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{A Quick Introduction to tidychem}
+  %\VignetteIndexEntry{Tidy Chemical Data}
 ---
 
 # Introduction

@@ -1,22 +1,16 @@
-#' Compute all 2D molecular descriptors.
-#'
-#' Compute all 2D molecular descriptors available in RDKit.
+#' Compute all 2D molecular descriptors
 #'
 #' @param mols A \code{tidymol} object.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export desc_2d
 #'
 #' @examples
 #' \dontrun{
-#'
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' desc_2d(mol)
-#' desc_2d(mols)
-#' }
+#' desc_2d(mols)}
 
 desc_2d <- function(mols) {
   desc_names_local <- get_alldesc_2d()
@@ -46,8 +40,6 @@ desc_2d <- function(mols) {
 #'
 #' @param mols A \code{tidymol} object.
 #'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @note Since there is some randomization in the conformer generation
 #' process, there would be some small numerical differences in the
 #' calculated descriptors in each different run.
@@ -56,13 +48,11 @@ desc_2d <- function(mols) {
 #'
 #' @examples
 #' \dontrun{
-#'
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' desc_3d(mol)
-#' desc_3d(mols)
-#' }
+#' desc_3d(mols)}
 
 desc_3d <- function(mols) {
   desc <- sapply(mols, get_desc_3d)

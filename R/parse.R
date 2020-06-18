@@ -1,10 +1,8 @@
-#' Parse molecules from SMILES strings.
+#' Parse molecules from SMILES strings
 #'
 #' Parse molecules from a vector of SMILES strings.
 #'
 #' @param string A vector of SMILES string(s).
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export parse_smiles
 #'
@@ -30,8 +28,6 @@ parse_smiles <- function(string) {
 #' Parse molecules from SDF/MOL text block.
 #'
 #' @param string A SDF/MOL text block string.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @importFrom reticulate r_to_py iterate
 #'

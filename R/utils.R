@@ -1,11 +1,7 @@
 #' Generate path to the example data.
 #'
-#' Generate path to the example data in the tidychem package.
-#'
 #' @param file Filename of the example dataset in the tidychem package,
 #' under the \code{inst/extdata/} directory.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export tidychem_example
 
@@ -14,10 +10,6 @@ tidychem_example <- function(file) {
 }
 
 #' Get RDKit version.
-#'
-#' Return the version number of the installed RDKit.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export rdkit_version
 #'

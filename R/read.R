@@ -4,8 +4,6 @@
 #'
 #' @param file Path to the SMILES file.
 #'
-#' @author Nan Xiao <\url{https://nanx.me}>
-#'
 #' @export read_smiles
 #'
 #' @examples
@@ -35,8 +33,6 @@ read_smiles <- function(file) {
 #' Read molecules from a SDF/MOL file.
 #'
 #' @param file Path to the SDF or MOL file.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export read_sdf
 #'

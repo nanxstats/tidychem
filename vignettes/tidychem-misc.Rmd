@@ -6,7 +6,7 @@ output:
   rmarkdown::html_vignette:
     toc: true
     number_sections: true
-    css: tidychem.css
+    css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Molecule operations with tidychem}

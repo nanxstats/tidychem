@@ -1,13 +1,9 @@
 #' Print parsed molecules object.
 #'
-#' Print parsed molecules object.
-#'
 #' @param x An object of class \code{tidymol}.
 #' @param ... Additional parameters for \code{\link{print}} (not used).
 #'
 #' @method print tidymol
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @importFrom utils head str
 #'
@@ -35,8 +31,6 @@ print.tidymol <- function(x, ...) {
 #' @param ... Additional parameters for \code{\link{print}} (not used).
 #'
 #' @method print tidyfps
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export
 #'
@@ -73,8 +67,6 @@ print.tidyfps <- function(x, ...) {
 #' @param ... Additional parameters for \code{\link{print}} (not used).
 #'
 #' @method print tidydesc
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
 #'
 #' @export
 #'

@@ -1,26 +1,23 @@
 # tidychem
 
-[![Travis-CI Build Status](https://travis-ci.org/road2stat/tidychem.svg?branch=master)](https://travis-ci.org/road2stat/tidychem)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/road2stat/tidychem?branch=master&svg=true)](https://ci.appveyor.com/project/road2stat/tidychem)
+[![Travis-CI Build Status](https://travis-ci.org/nanxstats/tidychem.svg?branch=master)](https://travis-ci.org/nanxstats/tidychem)
+[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/nanxstats/tidychem?branch=master&svg=true)](https://ci.appveyor.com/project/nanxstats/tidychem)
 [![CRAN Version](https://www.r-pkg.org/badges/version/tidychem)](https://cran.r-project.org/package=tidychem)
 
-Overview content.
+Read, preprocess, and featurize chemical data using RDKit. Offers a lightweight R interface for accessing RDKit via the [RDKit Python API](http://www.rdkit.org/docs/api/) and the reticulate package.
 
 ## Installation
-
-To download and install `tidychem` from CRAN:
 
 ```r
 install.packages("tidychem")
 ```
 
-Or try the development version on GitHub:
+Or
 
 ```r
-# install.packages("devtools")
-devtools::install_github("road2stat/tidychem")
+remotes::install_github("nanxstats/tidychem")
 ```
 
-## Copyright
+## License
 
-This project is licensed under the terms of the [BSD 3-clause license](LICENSE).
+tidychem is free and open source software, licensed under GPL-3.

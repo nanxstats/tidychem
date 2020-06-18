@@ -1,8 +1,4 @@
-#' Get the available 2D descriptor names.
-#'
-#' Get the available 2D descriptor names from the locally installed RDKit.
-#'
-#' @author Nan Xiao <\url{https://nanx.me}>
+#' Get all available 2D descriptor names
 #'
 #' @export get_alldesc_2d
 #'

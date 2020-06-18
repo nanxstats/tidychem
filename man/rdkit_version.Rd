@@ -7,14 +7,11 @@
 rdkit_version()
 }
 \description{
-Return the version number of the installed RDKit.
+Get RDKit version.
 }
 \examples{
 \dontrun{
 
 rdkit_version()
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

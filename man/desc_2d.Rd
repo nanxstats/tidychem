@@ -2,7 +2,7 @@
 % Please edit documentation in R/desc.R
 \name{desc_2d}
 \alias{desc_2d}
-\title{Compute all 2D molecular descriptors.}
+\title{Compute all 2D molecular descriptors}
 \usage{
 desc_2d(mols)
 }
@@ -10,18 +10,13 @@ desc_2d(mols)
 \item{mols}{A \code{tidymol} object.}
 }
 \description{
-Compute all 2D molecular descriptors available in RDKit.
+Compute all 2D molecular descriptors
 }
 \examples{
 \dontrun{
-
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
 desc_2d(mol)
-desc_2d(mols)
-}
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
+desc_2d(mols)}
 }

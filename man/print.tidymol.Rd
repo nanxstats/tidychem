@@ -21,6 +21,3 @@ parse_smiles("Cc1ccccc1")
 parse_smiles(c("Cc1ccccc1", "CCN(CC)CC"))
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

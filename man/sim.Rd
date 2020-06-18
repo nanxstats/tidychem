@@ -4,9 +4,12 @@
 \alias{sim}
 \title{Calculate fingerprint similarity.}
 \usage{
-sim(fps1 = NULL, fps2 = NULL, metric = c("tanimoto", "dice",
-  "cosine", "sokal", "russel", "rogotgoldberg", "allbit", "kulczynski",
-  "mcconnaughey", "asymmetric", "braunblanquet"))
+sim(
+  fps1 = NULL,
+  fps2 = NULL,
+  metric = c("tanimoto", "dice", "cosine", "sokal", "russel", "rogotgoldberg",
+    "allbit", "kulczynski", "mcconnaughey", "asymmetric", "braunblanquet")
+)
 }
 \arguments{
 \item{fps1}{A \code{tidyfps} object.}

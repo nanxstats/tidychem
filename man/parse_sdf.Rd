@@ -22,6 +22,3 @@ parse_sdf(str_single)
 parse_sdf(str_multiple)
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

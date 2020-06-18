@@ -2,7 +2,7 @@
 % Please edit documentation in R/parse.R
 \name{parse_smiles}
 \alias{parse_smiles}
-\title{Parse molecules from SMILES strings.}
+\title{Parse molecules from SMILES strings}
 \usage{
 parse_smiles(string)
 }
@@ -18,7 +18,4 @@ Parse molecules from a vector of SMILES strings.
 parse_smiles("Cc1ccccc1")
 parse_smiles(c("Cc1ccccc1", "CCN(CC)CC"))
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

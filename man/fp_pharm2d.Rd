@@ -29,6 +29,3 @@ fp_pharm2d(mol, type = "gobbi")
 fp_pharm2d(mols, type = "gobbi")
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

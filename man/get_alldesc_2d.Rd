@@ -2,19 +2,16 @@
 % Please edit documentation in R/desc-utils.R
 \name{get_alldesc_2d}
 \alias{get_alldesc_2d}
-\title{Get the available 2D descriptor names.}
+\title{Get all available 2D descriptor names}
 \usage{
 get_alldesc_2d()
 }
 \description{
-Get the available 2D descriptor names from the locally installed RDKit.
+Get all available 2D descriptor names
 }
 \examples{
 \dontrun{
 
 get_alldesc_2d()
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

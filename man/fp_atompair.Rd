@@ -2,7 +2,7 @@
 % Please edit documentation in R/fp.R
 \name{fp_atompair}
 \alias{fp_atompair}
-\title{Compute atom pairs fingerprints.}
+\title{Compute atom pairs fingerprints}
 \usage{
 fp_atompair(mols)
 }
@@ -10,7 +10,7 @@ fp_atompair(mols)
 \item{mols}{A \code{tidymol} object.}
 }
 \description{
-Compute atom pairs fingerprints.
+Compute atom pairs fingerprints
 }
 \note{
 The vectorized version of this fingerprint has a dimensionality
@@ -27,7 +27,4 @@ mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 fp_atompair(mol)
 fp_atompair(mols)
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

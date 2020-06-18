@@ -3,8 +3,10 @@
 \docType{data}
 \name{rdkit}
 \alias{rdkit}
-\title{Global reference to RDKit.}
-\format{An object of class \code{python.builtin.module} (inherits from \code{python.builtin.object}) of length 2.}
+\title{Global reference to RDKit}
+\format{
+An object of class \code{python.builtin.module} (inherits from \code{python.builtin.object}) of length 2.
+}
 \usage{
 rdkit
 }

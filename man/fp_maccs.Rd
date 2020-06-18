@@ -2,7 +2,7 @@
 % Please edit documentation in R/fp.R
 \name{fp_maccs}
 \alias{fp_maccs}
-\title{Compute MACCS keys.}
+\title{Compute MACCS keys as molecular fingerprints}
 \usage{
 fp_maccs(mols, explicit = FALSE)
 }
@@ -13,7 +13,7 @@ fp_maccs(mols, explicit = FALSE)
 Default is \code{FALSE}.}
 }
 \description{
-Compute the MACCS keys as molecular fingerprints.
+Compute MACCS keys as molecular fingerprints
 }
 \examples{
 \dontrun{
@@ -28,7 +28,4 @@ fp_maccs(mols)
 fp_maccs(mol, explicit = TRUE)
 fp_maccs(mols, explicit = TRUE)
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

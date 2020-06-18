@@ -19,6 +19,3 @@ read_sdf(tidychem_example("single.mol"))
 read_sdf(tidychem_example("5ht3ligs.sdf"))
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

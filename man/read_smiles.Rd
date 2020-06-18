@@ -21,6 +21,3 @@ read_smiles(tidychem_example("smi-single-noname.smi"))
 read_smiles(tidychem_example("smi-multiple-noname.smi"))
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

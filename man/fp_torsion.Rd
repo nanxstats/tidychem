@@ -28,6 +28,3 @@ fp_torsion(mol)
 fp_torsion(mols)
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

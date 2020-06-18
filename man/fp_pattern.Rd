@@ -2,7 +2,7 @@
 % Please edit documentation in R/fp.R
 \name{fp_pattern}
 \alias{fp_pattern}
-\title{Compute pattern fingerprints.}
+\title{Compute pattern fingerprints, a topological fingerprint optimized for substructure screening}
 \usage{
 fp_pattern(mols, explicit = FALSE)
 }
@@ -13,8 +13,7 @@ fp_pattern(mols, explicit = FALSE)
 Default is \code{FALSE}.}
 }
 \description{
-Compute pattern fingerprints, a topological fingerprint
-optimized for substructure screening.
+Compute pattern fingerprints, a topological fingerprint optimized for substructure screening
 }
 \examples{
 \dontrun{
@@ -28,7 +27,4 @@ fp_pattern(mols)
 fp_pattern(mol, explicit = TRUE)
 fp_pattern(mols, explicit = TRUE)
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

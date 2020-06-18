@@ -24,6 +24,3 @@ desc_2d(mol)
 desc_2d(mols)
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

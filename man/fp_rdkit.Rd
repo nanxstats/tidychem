@@ -2,7 +2,7 @@
 % Please edit documentation in R/fp.R
 \name{fp_rdkit}
 \alias{fp_rdkit}
-\title{Compute RDKit fingerprints.}
+\title{Compute RDKit fingerprints}
 \usage{
 fp_rdkit(mols, explicit = FALSE)
 }
@@ -29,7 +29,4 @@ fp_rdkit(mols)
 fp_rdkit(mol, explicit = TRUE)
 fp_rdkit(mols, explicit = TRUE)
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

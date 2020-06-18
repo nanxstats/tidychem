@@ -2,7 +2,7 @@
 % Please edit documentation in R/fp.R
 \name{fp_erg}
 \alias{fp_erg}
-\title{Compute extended reduced graphs fingerprints.}
+\title{Compute extended reduced graphs fingerprints derived from the ErG fingerprint}
 \usage{
 fp_erg(mols)
 }
@@ -10,8 +10,7 @@ fp_erg(mols)
 \item{mols}{A \code{tidymol} object.}
 }
 \description{
-Compute extended reduced graphs fingerprints
-derived from the ErG fingerprint.
+Compute extended reduced graphs fingerprints derived from the ErG fingerprint
 }
 \examples{
 \dontrun{
@@ -22,7 +21,4 @@ mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 fp_erg(mol)
 fp_erg(mols)
 }
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
 }

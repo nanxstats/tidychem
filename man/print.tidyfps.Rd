@@ -27,6 +27,3 @@ fp_topo(mol, explicit = TRUE)
 fp_topo(mols, explicit = TRUE)
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

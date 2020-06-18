@@ -19,14 +19,9 @@ calculated descriptors in each different run.
 }
 \examples{
 \dontrun{
-
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
 desc_3d(mol)
-desc_3d(mols)
-}
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
+desc_3d(mols)}
 }

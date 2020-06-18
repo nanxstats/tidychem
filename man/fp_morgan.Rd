@@ -46,6 +46,3 @@ fp_morgan(mol, radius = 1L, use_features = TRUE, explicit = TRUE)
 fp_morgan(mols, radius = 1L, use_features = TRUE, explicit = TRUE)
 }
 }
-\author{
-Nan Xiao <\url{https://nanx.me}>
-}

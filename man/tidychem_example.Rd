@@ -11,8 +11,5 @@ tidychem_example(file)
 under the \code{inst/extdata/} directory.}
 }
 \description{
-Generate path to the example data in the tidychem package.
-}
-\author{
-Nan Xiao <\url{https://nanx.me}>
+Generate path to the example data.
 }

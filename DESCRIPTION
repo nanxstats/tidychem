@@ -18,8 +18,9 @@ Imports:
     reticulate,
     readr,
     stringr,
-    crayon
+    crayon,
+    magrittr
 Suggests:
     knitr,
     rmarkdown
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1

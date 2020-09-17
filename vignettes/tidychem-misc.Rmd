@@ -12,19 +12,15 @@ vignette: >
   %\VignetteIndexEntry{Molecule operations with tidychem}
 ---
 
+```{r,eval=FALSE}
+library("tidychem")
+```
+
 # Basic information of molecules
 
 # Modify molecules
 
 ## Add hydrogen
-
-Let's load the package:
-
-```{r,eval=FALSE}
-library("tidychem")
-library("magrittr")
-library("readr")
-```
 
 ## Kekulize
 

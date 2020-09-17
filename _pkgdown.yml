@@ -1,14 +1,14 @@
 reference:
   - title: "Load molecules"
     desc: >
-      Read or parse SMILES, SDF, or MOL files or strings.
+      Read and parse SMILES, SDF, MOL files or strings.
     contents:
       - read_smiles
       - read_sdf
       - parse_smiles
       - parse_sdf
       - print.tidymol
-  - title: "Calculate molecular fingerprints"
+  - title: "Molecular fingerprints"
     desc: >
       Compute molecular fingerprints.
     contents:
@@ -21,7 +21,7 @@ reference:
       - fp_erg
       - fp_pattern
       - print.tidyfps
-  - title: "Calculate molecular descriptors"
+  - title: "Molecular descriptors"
     desc: >
       Compute 2D/3D molecular descriptors.
     contents:
@@ -29,12 +29,12 @@ reference:
       - desc_3d
       - get_alldesc_2d
       - print.tidydesc
-  - title: "Calculate fingerprint similarity"
+  - title: "Fingerprint similarity"
     desc: >
       Compute molecular fingerprint similarities.
     contents:
       - sim
-  - title: "Utility functions"
+  - title: "Utilities"
     desc: >
       Utility functions.
     contents:

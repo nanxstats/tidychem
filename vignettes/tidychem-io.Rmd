@@ -18,14 +18,12 @@ Let's load the package:
 
 ```{r,eval=FALSE}
 library("tidychem")
-library("magrittr")
-library("readr")
 ```
 
 ## Reading
 
 ## Parsing
 
-error handling example -- will be NULL.
+Error handling example -- will be `NULL`.
 
 ## Writing

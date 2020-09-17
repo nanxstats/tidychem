@@ -1,18 +1,19 @@
 # tidychem
 
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis-CI Build Status](https://travis-ci.org/nanxstats/tidychem.svg?branch=master)](https://travis-ci.org/nanxstats/tidychem)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/nanxstats/tidychem?branch=master&svg=true)](https://ci.appveyor.com/project/nanxstats/tidychem)
-[![CRAN Version](https://www.r-pkg.org/badges/version/tidychem)](https://cran.r-project.org/package=tidychem)
 
-Read, preprocess, and featurize chemical data using RDKit. Offers a lightweight R interface for accessing RDKit via the [RDKit Python API](http://www.rdkit.org/docs/api/) and the reticulate package.
+Read, preprocess, and featurize chemical data using RDKit.
+
+The `tidychem` package offers a lightweight R interface for accessing RDKit via the [RDKit Python API](http://www.rdkit.org/docs/api/).
+
+![](https://i.imgur.com/ZEeUmfW.png)
 
 ## Installation
 
-```r
-install.packages("tidychem")
-```
+First of all, [install RDKit](https://www.rdkit.org/docs/Install.html). Make sure it is [discoverable by reticulate](https://rstudio.github.io/reticulate/articles/versions.html).
 
-Or
+Then install `tidychem` with:
 
 ```r
 remotes::install_github("nanxstats/tidychem")

@@ -2,4 +2,4 @@
 
 ## New Features
 
-- Initial version of package.
+- Initial release.

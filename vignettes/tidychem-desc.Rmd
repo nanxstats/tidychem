@@ -12,15 +12,11 @@ vignette: >
   %\VignetteIndexEntry{Calculate chemical descriptors with tidychem}
 ---
 
-# Descriptors
-
-Let's load the package:
-
 ```{r,eval=FALSE}
 library("tidychem")
-library("magrittr")
-library("readr")
 ```
+
+# Descriptors
 
 # Regression example
 
@@ -32,4 +28,4 @@ logd1k dataset.
 
 The 3D follow a common workflow: 3D formance -> descriptor...
 
-If already optimized with 3D coordinates, just load them with parse_sdf or read_sdf directly, then compute the 3D descriptors with the vanilla option.
+If already optimized with 3D coordinates, load them with `parse_sdf` or `read_sdf` directly, then compute the 3D descriptors with the vanilla option.

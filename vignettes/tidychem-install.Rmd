@@ -12,8 +12,6 @@ vignette: >
   %\VignetteIndexEntry{Install RDKit and tidychem}
 ---
 
-# Title
+Installation guide for Linux, Mac, Windows.
 
-Install under Linux, Mac, Windows.
-
-Test method to see if correctly installed.
+Testing methods to see if correctly installed.

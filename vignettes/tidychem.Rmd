@@ -1,5 +1,5 @@
 ---
-title: "Tidy Chemical Data"
+title: "A Grammar for Tidying Chemical Data"
 author: "Nan Xiao <<https://nanx.me>>"
 date: "`r Sys.Date()`"
 output:
@@ -9,21 +9,17 @@ output:
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Tidy Chemical Data}
+  %\VignetteIndexEntry{A Grammar for Tidying Chemical Data}
 ---
 
 # Introduction
 
-The `tidychem` package ...
+The `tidychem` package offers a lightweight R interface for accessing RDKit via the [RDKit Python API](http://www.rdkit.org/docs/api/).
 
 # Walkthrough
 
-Let's load the package:
-
 ```{r,eval=FALSE}
 library("tidychem")
-library("magrittr")
-library("readr")
 ```
 
 ```{r,eval=FALSE}

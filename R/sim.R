@@ -21,11 +21,13 @@
 #' (mols1 %>% fp_maccs) %>% sim(mols2 %>% fp_maccs, "tanimoto")
 #' }
 
-sim <- function(fps1 = NULL, fps2 = NULL, metric = c(
-                  "tanimoto", "dice", "cosine", "sokal",
-                  "russel", "rogotgoldberg", "allbit",
-                  "kulczynski", "mcconnaughey", "asymmetric", "braunblanquet"
-                )) {
+sim <- function(
+  fps1 = NULL, fps2 = NULL,
+  metric = c(
+    "tanimoto", "dice", "cosine", "sokal",
+    "russel", "rogotgoldberg", "allbit",
+    "kulczynski", "mcconnaughey", "asymmetric", "braunblanquet"
+  )) {
   metric <- match.arg(metric)
   if (is.null(fps1)) stop("Please provide one tidyfps object.")
 

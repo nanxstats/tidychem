@@ -149,7 +149,7 @@
     <p>Parse molecules from SDF/MOL text block.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>parse_sdf</span>(<span class='no'>string</span>)</pre>
+    <pre class="usage"><span class='fu'>parse_sdf</span>(<span class='kw'>string</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -162,14 +162,15 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 
-<span class='no'>str_single</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"single.mol"</span>))
-<span class='no'>str_multiple</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>readr</span><span class='kw ns'>::</span><span class='fu'><a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"5ht3ligs.sdf"</span>))
+<span class='kw'>str_single</span> <span class='op'>&lt;-</span> <span class='kw'>readr</span>::<span class='fu'><a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"single.mol"</span>))
+<span class='kw'>str_multiple</span> <span class='op'>&lt;-</span> <span class='kw'>readr</span>::<span class='fu'><a href='https://readr.tidyverse.org/reference/read_file.html'>read_file</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"5ht3ligs.sdf"</span>))
 
-<span class='fu'>parse_sdf</span>(<span class='no'>str_single</span>)
-<span class='fu'>parse_sdf</span>(<span class='no'>str_multiple</span>)
-}</div></pre>
+<span class='fu'>parse_sdf</span>(<span class='kw'>str_single</span>)
+<span class='fu'>parse_sdf</span>(<span class='kw'>str_multiple</span>)
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -185,7 +186,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

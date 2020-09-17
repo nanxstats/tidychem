@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Compute 2D pharmacophore fingerprints. — fp_pharm2d • tidychem</title>
+<title>Pipe operator — %&gt;% • tidychem</title>
 
 
 <!-- jquery -->
@@ -41,8 +41,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Compute 2D pharmacophore fingerprints. — fp_pharm2d" />
-<meta property="og:description" content="Compute 2D pharmacophore fingerprints." />
+<meta property="og:title" content="Pipe operator — %&gt;%" />
+<meta property="og:description" content="See magrittr::%&amp;gt;% for details." />
 
 
 
@@ -140,46 +140,19 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Compute 2D pharmacophore fingerprints.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/nanxstats/tidychem/blob/master/R/fp.R'><code>R/fp.R</code></a></small>
-    <div class="hidden name"><code>fp_pharm2d.Rd</code></div>
+    <h1>Pipe operator</h1>
+    <small class="dont-index">Source: <a href='https://github.com/nanxstats/tidychem/blob/master/R/utils-pipe.R'><code>R/utils-pipe.R</code></a></small>
+    <div class="hidden name"><code>pipe.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Compute 2D pharmacophore fingerprints.</p>
+    <p>See <code>magrittr::%&gt;%</code> for details.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>fp_pharm2d</span>(<span class='kw'>mols</span>, type = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"default"</span>, <span class='st'>"gobbi"</span>))</pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>mols</th>
-      <td><p>A <code>tidymol</code> object.</p></td>
-    </tr>
-    <tr>
-      <th>type</th>
-      <td><p>Type of the fingerprint. <code>"default"</code> uses
-the chemical features defined by RDKit, <code>"gobbi"</code> uses
-the set of chemical features feature defined by Gobbi and Poppinger (1998).</p></td>
-    </tr>
-    </table>
+    <pre class="usage"><span class='kw'>lhs</span> <span class='op'>%&gt;%</span> <span class='kw'>rhs</span></pre>
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 
-<span class='kw'>mol</span> <span class='op'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='st'>"Cc1ccccc1"</span>)
-<span class='kw'>mols</span> <span class='op'>&lt;-</span> <span class='fu'><a href='read_smiles.html'>read_smiles</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"smi-multiple.smi"</span>))
-
-<span class='fu'>fp_pharm2d</span>(<span class='kw'>mol</span>)
-<span class='fu'>fp_pharm2d</span>(<span class='kw'>mols</span>)
-
-<span class='fu'>fp_pharm2d</span>(<span class='kw'>mol</span>, type = <span class='st'>"gobbi"</span>)
-<span class='fu'>fp_pharm2d</span>(<span class='kw'>mols</span>, type = <span class='st'>"gobbi"</span>)
-}
-</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

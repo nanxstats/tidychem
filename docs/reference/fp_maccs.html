@@ -149,7 +149,7 @@
     <p>Compute MACCS keys as molecular fingerprints</p>
     </div>
 
-    <pre class="usage"><span class='fu'>fp_maccs</span>(<span class='no'>mols</span>, <span class='kw'>explicit</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>fp_maccs</span>(<span class='kw'>mols</span>, explicit = <span class='fl'>FALSE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -167,18 +167,19 @@ Default is <code>FALSE</code>.</p></td>
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 
-<span class='no'>mol</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='st'>"Cc1ccccc1"</span>)
-<span class='no'>mols</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='read_smiles.html'>read_smiles</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"smi-multiple.smi"</span>))
+<span class='kw'>mol</span> <span class='op'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='st'>"Cc1ccccc1"</span>)
+<span class='kw'>mols</span> <span class='op'>&lt;-</span> <span class='fu'><a href='read_smiles.html'>read_smiles</a></span>(<span class='fu'><a href='tidychem_example.html'>tidychem_example</a></span>(<span class='st'>"smi-multiple.smi"</span>))
 
-<span class='fu'>fp_maccs</span>(<span class='no'>mol</span>)
-<span class='fu'>fp_maccs</span>(<span class='no'>mols</span>)
+<span class='fu'>fp_maccs</span>(<span class='kw'>mol</span>)
+<span class='fu'>fp_maccs</span>(<span class='kw'>mols</span>)
 
 <span class='co'># get fingerprints matrix</span>
-<span class='fu'>fp_maccs</span>(<span class='no'>mol</span>, <span class='kw'>explicit</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-<span class='fu'>fp_maccs</span>(<span class='no'>mols</span>, <span class='kw'>explicit</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
-}</div></pre>
+<span class='fu'>fp_maccs</span>(<span class='kw'>mol</span>, explicit = <span class='fl'>TRUE</span>)
+<span class='fu'>fp_maccs</span>(<span class='kw'>mols</span>, explicit = <span class='fl'>TRUE</span>)
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -194,7 +195,7 @@ Default is <code>FALSE</code>.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

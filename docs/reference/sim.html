@@ -150,9 +150,9 @@
     </div>
 
     <pre class="usage"><span class='fu'>sim</span>(
-  <span class='kw'>fps1</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>fps2</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>metric</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"tanimoto"</span>, <span class='st'>"dice"</span>, <span class='st'>"cosine"</span>, <span class='st'>"sokal"</span>, <span class='st'>"russel"</span>, <span class='st'>"rogotgoldberg"</span>,
+  fps1 = <span class='kw'>NULL</span>,
+  fps2 = <span class='kw'>NULL</span>,
+  metric = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"tanimoto"</span>, <span class='st'>"dice"</span>, <span class='st'>"cosine"</span>, <span class='st'>"sokal"</span>, <span class='st'>"russel"</span>, <span class='st'>"rogotgoldberg"</span>,
     <span class='st'>"allbit"</span>, <span class='st'>"kulczynski"</span>, <span class='st'>"mcconnaughey"</span>, <span class='st'>"asymmetric"</span>, <span class='st'>"braunblanquet"</span>)
 )</pre>
 
@@ -171,20 +171,21 @@
 
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+    <pre class="examples"><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
 
-<span class='no'>mols1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cc1ccccc1"</span>, <span class='st'>"CCN(CC)CC"</span>))
-<span class='no'>mols2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cc1ccccc1"</span>, <span class='st'>"CCN(CC)CC"</span>, <span class='st'>"CCC"</span>))
-<span class='no'>fps1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='fp_maccs.html'>fp_maccs</a></span>(<span class='no'>mols1</span>)
-<span class='no'>fps2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='fp_maccs.html'>fp_maccs</a></span>(<span class='no'>mols2</span>)
+<span class='kw'>mols1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cc1ccccc1"</span>, <span class='st'>"CCN(CC)CC"</span>))
+<span class='kw'>mols2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='parse_smiles.html'>parse_smiles</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Cc1ccccc1"</span>, <span class='st'>"CCN(CC)CC"</span>, <span class='st'>"CCC"</span>))
+<span class='kw'>fps1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='fp_maccs.html'>fp_maccs</a></span>(<span class='kw'>mols1</span>)
+<span class='kw'>fps2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='fp_maccs.html'>fp_maccs</a></span>(<span class='kw'>mols2</span>)
 
-<span class='fu'>sim</span>(<span class='no'>fps1</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>"tanimoto"</span>)
-<span class='fu'>sim</span>(<span class='no'>fps1</span>, <span class='no'>fps2</span>, <span class='kw'>metric</span> <span class='kw'>=</span> <span class='st'>"tanimoto"</span>)
+<span class='fu'>sim</span>(<span class='kw'>fps1</span>, metric = <span class='st'>"tanimoto"</span>)
+<span class='fu'>sim</span>(<span class='kw'>fps1</span>, <span class='kw'>fps2</span>, metric = <span class='st'>"tanimoto"</span>)
 
 <span class='co'># or use pipes</span>
-<span class='no'>mols1</span> <span class='kw'>%&gt;%</span> <span class='no'>fp_maccs</span> <span class='kw'>%&gt;%</span> <span class='fu'>sim</span>(<span class='st'>"tanimoto"</span>)
-(<span class='no'>mols1</span> <span class='kw'>%&gt;%</span> <span class='no'>fp_maccs</span>) <span class='kw'>%&gt;%</span> <span class='fu'>sim</span>(<span class='no'>mols2</span> <span class='kw'>%&gt;%</span> <span class='no'>fp_maccs</span>, <span class='st'>"tanimoto"</span>)
-}</div></pre>
+<span class='kw'>mols1</span> <span class='op'>%&gt;%</span> <span class='kw'>fp_maccs</span> <span class='op'>%&gt;%</span> <span class='fu'>sim</span>(<span class='st'>"tanimoto"</span>)
+(<span class='kw'>mols1</span> <span class='op'>%&gt;%</span> <span class='kw'>fp_maccs</span>) <span class='op'>%&gt;%</span> <span class='fu'>sim</span>(<span class='kw'>mols2</span> <span class='op'>%&gt;%</span> <span class='kw'>fp_maccs</span>, <span class='st'>"tanimoto"</span>)
+}
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -200,7 +201,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

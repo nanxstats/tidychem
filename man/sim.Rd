@@ -15,6 +15,8 @@ sim(
 \item{fps1}{A \code{tidyfps} object.}
 
 \item{fps2}{A \code{tidyfps} object (optional).}
+
+\item{metric}{Metric type.}
 }
 \description{
 Calculate fingerprint similarity.

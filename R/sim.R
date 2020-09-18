@@ -4,6 +4,7 @@
 #'
 #' @param fps1 A \code{tidyfps} object.
 #' @param fps2 A \code{tidyfps} object (optional).
+#' @param metric Metric type.
 #
 #' @examples
 #' \dontrun{

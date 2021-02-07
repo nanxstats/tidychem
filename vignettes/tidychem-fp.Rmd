@@ -1,7 +1,6 @@
 ---
 title: "Calculate chemical fingerprints with tidychem"
 author: "Nan Xiao <<https://nanx.me>>"
-date: "`r Sys.Date()`"
 output:
   rmarkdown::html_vignette:
     toc: true

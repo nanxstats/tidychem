@@ -6,6 +6,8 @@
 \alias{_PACKAGE}
 \title{tidychem: Tidy Chemical Data}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 Read, preprocess, and featurize chemical data using 'RDKit'.
 }
 \seealso{

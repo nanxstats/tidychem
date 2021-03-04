@@ -1,7 +1,6 @@
 # tidychem  <a href="https://nanx.me/tidychem/"><img src="man/figures/logo.png" align="right" height="180" /></a>
 
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Travis build status](https://travis-ci.org/nanxstats/tidychem.svg?branch=master)](https://travis-ci.org/nanxstats/tidychem)
 
 Read, preprocess, and featurize chemical data using RDKit.
 

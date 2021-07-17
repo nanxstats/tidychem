@@ -112,7 +112,7 @@
 
 <p>Read, preprocess, and featurize chemical data using RDKit.</p>
 <p>The <code>tidychem</code> package offers a lightweight R interface for accessing RDKit via the <a href="https://www.rdkit.org/docs/api-docs.html">RDKit Python API</a>.</p>
-<p><img src="https://i.imgur.com/ZEeUmfW.png"></p>
+<p><img src="reference/figures/tidychem-workflow.png"></p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -120,6 +120,27 @@
 <p>Then install <code>tidychem</code> with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"nanxstats/tidychem"</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="usage" class="section level2">
+<h2 class="hasAnchor">
+<a href="#usage" class="anchor"></a>Usage</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/reticulate/man/use_python.html">use_python</a></span><span class="op">(</span><span class="st">"/usr/local/bin/python3"</span><span class="op">)</span>
+
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://nanx.me/tidychem/">"tidychem"</a></span><span class="op">)</span>
+
+<span class="st">"smi-multiple.smi"</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="reference/tidychem_example.html">tidychem_example</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="reference/read_smiles.html">read_smiles</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="reference/fp_morgan.html">fp_morgan</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+</div>
+<div id="developers" class="section level2">
+<h2 class="hasAnchor">
+<a href="#developers" class="anchor"></a>Developers</h2>
+<p>If you have already installed Python and tidychem, and want to develop tidychem in RStudio, simply create a file <code>.Rprofile</code> under the package directory and set the Python binary path (Homebrew Python 3 path example below):</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv</a></span><span class="op">(</span>RETICULATE_PYTHON <span class="op">=</span> <span class="st">"/usr/local/bin/python3"</span><span class="op">)</span></code></pre></div>
+<p>The next time you open the project, the correct Python path and library path should be already set. For more technical details, see <a href="https://rstudio.github.io/reticulate/articles/versions.html">reticulate Python version configuration</a>.</p>
 </div>
 <div id="license" class="section level2">
 <h2 class="hasAnchor">

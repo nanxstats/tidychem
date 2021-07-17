@@ -9,7 +9,7 @@ Read, preprocess, and featurize chemical data using RDKit.
 
 The `tidychem` package offers a lightweight R interface for accessing RDKit via the [RDKit Python API](https://www.rdkit.org/docs/api-docs.html).
 
-![](https://i.imgur.com/ZEeUmfW.png)
+![](man/figures/tidychem-workflow.png)
 
 ## Installation
 

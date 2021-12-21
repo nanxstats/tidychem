@@ -4,26 +4,33 @@ author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
     toc: true
-    number_sections: true
+    number_sections: false
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Calculate chemical descriptors with tidychem}
 ---
 
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
 ```{r,eval=FALSE}
 library("tidychem")
 ```
 
-# Descriptors
+## Descriptors
 
-# Regression example
+## Regression example
 
 logd1k dataset.
 
-# 2D descriptors
+## 2D descriptors
 
-# 3D descriptors
+## 3D descriptors
 
 The 3D follow a common workflow: 3D formance -> descriptor...
 

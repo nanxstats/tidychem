@@ -1,4 +1,4 @@
-# tidychem  <a href="https://nanx.me/tidychem/"><img src="man/figures/logo.png" align="right" height="180" /></a>
+# tidychem <img src="man/figures/logo.png" align="right" width="120" />
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)

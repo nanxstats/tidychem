@@ -4,31 +4,36 @@ author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
     toc: true
-    number_sections: true
+    number_sections: false
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Molecule operations with tidychem}
 ---
 
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
 ```{r,eval=FALSE}
 library("tidychem")
 ```
 
-# Basic information of molecules
+## Basic information of molecules
 
-# Modify molecules
+## Modify molecules
 
-## Add hydrogen
+### Add hydrogen
 
-## Kekulize
+### Kekulize
 
-# Substructure Searching
+## Substructure Searching
 
-# Maximum Common Substructure
+## Maximum Common Substructure
 
-# Draw molecules
+## Draw molecules
 
-# Similarity maps
-
-# etc.
+## Similarity maps

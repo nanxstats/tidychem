@@ -4,14 +4,21 @@ author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
     toc: true
-    number_sections: true
+    number_sections: false
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Calculate chemical fingerprints with tidychem}
 ---
 
-# Fingerprints
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
+## Fingerprints
 
 Let's load the package:
 
@@ -21,12 +28,12 @@ library("magrittr")
 library("readr")
 ```
 
-# Classification example
+## Classification example
 
-# Calculate similarity
+## Calculate similarity
 
-## similarity search -- rank molecules
+### similarity search -- rank molecules
 
-## kernel classification example
+### kernel classification example
 
-# MCS search -- minimum common structure search using pattern fingerprint?
+## MCS search -- minimum common structure search using pattern fingerprint?

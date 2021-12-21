@@ -4,14 +4,21 @@ author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
     toc: true
-    number_sections: true
+    number_sections: false
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Load, parse, and write chemical data with tidychem}
 ---
 
-# Chemical data format intro -- SMI and SDF/MOL
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
+## Chemical data format intro: SMI and SDF/MOL
 
 Let's load the package:
 
@@ -19,10 +26,10 @@ Let's load the package:
 library("tidychem")
 ```
 
-## Reading
+### Reading
 
-## Parsing
+### Parsing
 
 Error handling example -- will be `NULL`.
 
-## Writing
+### Writing

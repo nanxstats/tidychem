@@ -4,12 +4,19 @@ author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
     toc: true
-    number_sections: true
+    number_sections: false
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Install RDKit and tidychem}
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
 
 Installation guide for Linux, Mac, Windows.
 

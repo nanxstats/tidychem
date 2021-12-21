@@ -4,18 +4,25 @@ author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
     toc: true
-    number_sections: true
+    number_sections: false
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{A Grammar for Tidying Chemical Data}
 ---
 
-# Introduction
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
+## Introduction
 
 The `tidychem` package offers a lightweight R interface for accessing RDKit via the [RDKit Python API](http://www.rdkit.org/docs/api/).
 
-# Walkthrough
+## Walkthrough
 
 ```{r,eval=FALSE}
 library("tidychem")

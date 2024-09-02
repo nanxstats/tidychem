@@ -7,8 +7,8 @@
 sim(
   fps1 = NULL,
   fps2 = NULL,
-  metric = c("tanimoto", "dice", "cosine", "sokal", "russel", "rogotgoldberg",
-    "allbit", "kulczynski", "mcconnaughey", "asymmetric", "braunblanquet")
+  metric = c("tanimoto", "dice", "cosine", "sokal", "russel", "rogotgoldberg", "allbit",
+    "kulczynski", "mcconnaughey", "asymmetric", "braunblanquet")
 )
 }
 \arguments{

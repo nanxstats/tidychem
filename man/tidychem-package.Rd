@@ -2,11 +2,11 @@
 % Please edit documentation in R/package.R
 \docType{package}
 \name{tidychem-package}
+\alias{tidychem}
 \alias{tidychem-package}
-\alias{_PACKAGE}
 \title{tidychem: Tidy Chemical Data}
 \description{
-\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
 Read, preprocess, and featurize chemical data using 'RDKit'.
 }

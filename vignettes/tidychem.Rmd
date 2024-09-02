@@ -25,11 +25,17 @@ knitr::opts_chunk$set(eval = run)
 
 The `tidychem` package offers a lightweight R interface for accessing RDKit via the [RDKit Python API](http://www.rdkit.org/docs/api/).
 
-## Walkthrough
-
 ```{r}
 library("tidychem")
 ```
+
+## Load, parse, and write chemical data
+
+Chemical data format intro: SMI and SDF/MOL.
+
+Reading. Parsing (Error handling example -- will be `NULL`.). Writing.
+
+## Calculate chemical fingerprints
 
 ```{r}
 mols <- "smi-multiple.smi" |>
@@ -45,6 +51,14 @@ mols |> fp_morgan()
 # matrix
 mols |> fp_morgan(explicit = TRUE)
 ```
+
+## Calculate chemical descriptors
+
+2D descriptors and 3D descriptors.
+
+The 3D follow a common workflow: 3D formance -> descriptor...
+
+If already optimized with 3D coordinates, load them with `parse_sdf` or `read_sdf` directly, then compute the 3D descriptors with the vanilla option.
 
 ```{r}
 df <- "logd74.tsv" |>

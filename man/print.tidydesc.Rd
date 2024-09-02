@@ -9,7 +9,7 @@
 \arguments{
 \item{x}{An object of class \code{tidydesc}.}
 
-\item{...}{Additional parameters for \code{\link{print}} (not used).}
+\item{...}{Additional parameters for \code{\link[=print]{print()}} (not used).}
 }
 \description{
 Print molecular descriptors object.

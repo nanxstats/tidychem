@@ -1,7 +1,7 @@
 #' Generate path to the example data.
 #'
 #' @param file Filename of the example dataset in the tidychem package,
-#' under the \code{inst/extdata/} directory.
+#' under the `inst/extdata/` directory.
 #'
 #' @export tidychem_example
 

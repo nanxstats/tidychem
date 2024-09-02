@@ -2,8 +2,8 @@
 #'
 #' Calculate fingerprint similarity.
 #'
-#' @param fps1 A \code{tidyfps} object.
-#' @param fps2 A \code{tidyfps} object (optional).
+#' @param fps1 A `tidyfps` object.
+#' @param fps2 A `tidyfps` object (optional).
 #' @param metric Metric type.
 #
 #' @examples

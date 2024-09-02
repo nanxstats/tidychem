@@ -1,6 +1,6 @@
 #' Compute all 2D molecular descriptors
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #'
 #' @export desc_2d
 #'
@@ -38,7 +38,7 @@ desc_2d <- function(mols) {
 #'
 #' Compute all 3D descriptors available in RDKit.
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #'
 #' @note Since there is some randomization in the conformer generation
 #' process, there would be some small numerical differences in the

@@ -3,9 +3,9 @@
 #' Compute the Daylight-like fingerprint based on
 #' hashing molecular subgraphs defined by RDKit.
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #' @param explicit Return the fingerprints as a vector or matrix?
-#' Default is \code{FALSE}.
+#' Default is `FALSE`.
 #'
 #' @export fp_rdkit
 #'
@@ -32,9 +32,9 @@ fp_rdkit <- function(mols, explicit = FALSE) {
 
 #' Compute MACCS keys as molecular fingerprints
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #' @param explicit Return the fingerprints as a vector or matrix?
-#' Default is \code{FALSE}.
+#' Default is `FALSE`.
 #'
 #' @export fp_maccs
 #'
@@ -61,7 +61,7 @@ fp_maccs <- function(mols, explicit = FALSE) {
 
 #' Compute atom pairs fingerprints
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #'
 #' @note The vectorized version of this fingerprint has a dimensionality
 #' of millions, which is usually considered too high for direct
@@ -88,7 +88,7 @@ fp_atompair <- function(mols) {
 
 #' Compute topological torsions fingerprints.
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #'
 #' @note The vectorized version of this fingerprint has a dimensionality
 #' of millions, which is usually considered too high for direct
@@ -115,15 +115,15 @@ fp_torsion <- function(mols) {
 
 #' Compute Morgan fingerprints (circular fingerprints).
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #' @param radius The radius parameter for Morgan fingerprints.
-#' \code{radius = 2} is roughly equivalent to ECFP4 and FCFP4.
+#' `radius = 2` is roughly equivalent to ECFP4 and FCFP4.
 #' @param use_features Should we use the feature-based invariants,
-#' similar to those used for the FCFP fingerprints? Defaults to \code{FALSE}.
+#' similar to those used for the FCFP fingerprints? Defaults to `FALSE`.
 #' This means only apply the default atom invariants, which use the
 #' connectivity information similar to those used for the ECFP fingerprints.
 #' @param explicit Return the fingerprints as a vector or matrix?
-#' Default is \code{FALSE}.
+#' Default is `FALSE`.
 #'
 #' @export fp_morgan
 #'
@@ -163,9 +163,9 @@ fp_morgan <- function(mols, radius = 2L, use_features = FALSE, explicit = FALSE)
 
 #' Compute 2D pharmacophore fingerprints.
 #'
-#' @param mols A \code{tidymol} object.
-#' @param type Type of the fingerprint. \code{"default"} uses
-#' the chemical features defined by RDKit, \code{"gobbi"} uses
+#' @param mols A `tidymol` object.
+#' @param type Type of the fingerprint. `"default"` uses
+#' the chemical features defined by RDKit, `"gobbi"` uses
 #' the set of chemical features feature defined by Gobbi and Poppinger (1998).
 #'
 #' @export fp_pharm2d
@@ -192,7 +192,7 @@ fp_pharm2d <- function(mols, type = c("default", "gobbi")) {
 
 #' Compute extended reduced graphs fingerprints derived from the ErG fingerprint
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #'
 #' @export fp_erg
 #'
@@ -215,9 +215,9 @@ fp_erg <- function(mols) {
 
 #' Compute pattern fingerprints, a topological fingerprint optimized for substructure screening
 #'
-#' @param mols A \code{tidymol} object.
+#' @param mols A `tidymol` object.
 #' @param explicit Return the fingerprints as a vector or matrix?
-#' Default is \code{FALSE}.
+#' Default is `FALSE`.
 #'
 #' @export fp_pattern
 #'

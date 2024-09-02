@@ -1,7 +1,7 @@
 #' Print parsed molecules object.
 #'
-#' @param x An object of class \code{tidymol}.
-#' @param ... Additional parameters for \code{\link{print}} (not used).
+#' @param x An object of class `tidymol`.
+#' @param ... Additional parameters for [print()] (not used).
 #'
 #' @method print tidymol
 #'
@@ -27,8 +27,8 @@ print.tidymol <- function(x, ...) {
 #'
 #' Print molecular fingerprints object.
 #'
-#' @param x An object of class \code{tidyfps}.
-#' @param ... Additional parameters for \code{\link{print}} (not used).
+#' @param x An object of class `tidyfps`.
+#' @param ... Additional parameters for [print()] (not used).
 #'
 #' @method print tidyfps
 #'
@@ -63,8 +63,8 @@ print.tidyfps <- function(x, ...) {
 #'
 #' Print molecular descriptors object.
 #'
-#' @param x An object of class \code{tidydesc}.
-#' @param ... Additional parameters for \code{\link{print}} (not used).
+#' @param x An object of class `tidydesc`.
+#' @param ... Additional parameters for [print()] (not used).
 #'
 #' @method print tidydesc
 #'

@@ -8,7 +8,7 @@ tidychem_example(file)
 }
 \arguments{
 \item{file}{Filename of the example dataset in the tidychem package,
-under the \code{inst/extdata/} directory.}
+under the \verb{inst/extdata/} directory.}
 }
 \description{
 Generate path to the example data.

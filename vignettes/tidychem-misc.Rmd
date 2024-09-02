@@ -1,5 +1,5 @@
 ---
-title: "Molecule operations with tidychem"
+title: "Molecule operations"
 author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
@@ -8,7 +8,7 @@ output:
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Molecule operations with tidychem}
+  %\VignetteIndexEntry{Molecule operations}
 ---
 
 ```{r, include=FALSE}
@@ -16,9 +16,12 @@ knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE
 )
+
+run <- if (tidychem::is_installed_rdkit()) TRUE else FALSE
+knitr::opts_chunk$set(eval = run)
 ```
 
-```{r,eval=FALSE}
+```{r}
 library("tidychem")
 ```
 

@@ -10,8 +10,7 @@ get_alldesc_2d()
 Get all available 2D descriptor names
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 get_alldesc_2d()
-}
+\dontshow{\}) # examplesIf}
 }

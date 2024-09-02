@@ -34,11 +34,13 @@ get_fp_maccs <- function(mol, explicit) {
   fp
 }
 
-get_fp_atompair <- function(mol)
+get_fp_atompair <- function(mol) {
   rdkit$Chem$AtomPairs$Pairs$GetAtomPairFingerprint(mol)
+}
 
-get_fp_torsion <- function(mol)
+get_fp_torsion <- function(mol) {
   rdkit$Chem$AtomPairs$Torsions$GetTopologicalTorsionFingerprint(mol)
+}
 
 get_fp_morgan <- function(mol, radius, use_features, explicit) {
   if (!explicit) {
@@ -64,8 +66,9 @@ get_fp_pharm2d <- function(mol, type) {
   fp
 }
 
-get_fp_erg <- function(mol)
+get_fp_erg <- function(mol) {
   rdkit$Chem$rdReducedGraphs$GetErGFingerprint(mol)
+}
 
 get_fp_pattern <- function(mol, explicit) {
   fp <- rdkit$Chem$PatternFingerprint(mol)

@@ -10,8 +10,7 @@ rdkit_version()
 Get RDKit version.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 rdkit_version()
-}
+\dontshow{\}) # examplesIf}
 }

@@ -1,5 +1,5 @@
 ---
-title: "A Grammar for Tidying Chemical Data"
+title: "Tidy chemical data"
 author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
@@ -8,7 +8,7 @@ output:
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{A Grammar for Tidying Chemical Data}
+  %\VignetteIndexEntry{Tidy chemical data}
 ---
 
 ```{r, include=FALSE}
@@ -16,6 +16,9 @@ knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE
 )
+
+run <- if (tidychem::is_installed_rdkit()) TRUE else FALSE
+knitr::opts_chunk$set(eval = run)
 ```
 
 ## Introduction
@@ -24,15 +27,17 @@ The `tidychem` package offers a lightweight R interface for accessing RDKit via 
 
 ## Walkthrough
 
-```{r,eval=FALSE}
+```{r}
 library("tidychem")
 ```
 
-```{r,eval=FALSE}
-mols <- "smi-multiple.smi" %>% tidychem_example %>% read_smiles
+```{r}
+mols <- "smi-multiple.smi" %>%
+  tidychem_example() %>%
+  read_smiles()
 
 # ECFP4
-mols %>% fp_morgan
+mols %>% fp_morgan()
 
 # similarity
 # mols %>% fp_morgan %>% sim_tanimoto
@@ -41,22 +46,24 @@ mols %>% fp_morgan
 mols %>% fp_morgan(explicit = TRUE)
 ```
 
-```{r,eval=FALSE}
-df <- "logd74.tsv" %>% tidychem_example %>% read_tsv
+```{r}
+df <- "logd74.tsv" %>%
+  tidychem_example() %>%
+  read_tsv()
 y <- df$logD7.4
-mols <- df$SMILES %>% parse_smiles
+mols <- df$SMILES %>% parse_smiles()
 mols
 
 # matrix of 2D/3D descriptors
-x <- mols %>% desc_2d
+x <- mols %>% desc_2d()
 x
 x[which(is.na(x))] <- 0
 ```
 
-```{r,eval=FALSE}
+```{r}
 library("glmnet")
 
-cvfit = cv.glmnet(x, y)
+cvfit <- cv.glmnet(x, y)
 plot(cvfit)
 
 fit <- glmnet(x, y)

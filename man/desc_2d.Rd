@@ -13,10 +13,11 @@ desc_2d(mols)
 Compute all 2D molecular descriptors
 }
 \examples{
-\dontrun{
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
 desc_2d(mol)
-desc_2d(mols)}
+desc_2d(mols)
+\dontshow{\}) # examplesIf}
 }

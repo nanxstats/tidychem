@@ -13,9 +13,8 @@ read_sdf(file)
 Read molecules from a SDF/MOL file.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 read_sdf(tidychem_example("single.mol"))
 read_sdf(tidychem_example("5ht3ligs.sdf"))
-}
+\dontshow{\}) # examplesIf}
 }

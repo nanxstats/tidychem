@@ -22,8 +22,7 @@ sim(
 Calculate fingerprint similarity.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mols1 <- parse_smiles(c("Cc1ccccc1", "CCN(CC)CC"))
 mols2 <- parse_smiles(c("Cc1ccccc1", "CCN(CC)CC", "CCC"))
 fps1 <- fp_maccs(mols1)
@@ -33,7 +32,9 @@ sim(fps1, metric = "tanimoto")
 sim(fps1, fps2, metric = "tanimoto")
 
 # or use pipes
-mols1 \%>\% fp_maccs \%>\% sim("tanimoto")
-(mols1 \%>\% fp_maccs) \%>\% sim(mols2 \%>\% fp_maccs, "tanimoto")
-}
+mols1 \%>\%
+  fp_maccs() \%>\%
+  sim("tanimoto")
+(mols1 \%>\% fp_maccs()) \%>\% sim(mols2 \%>\% fp_maccs(), "tanimoto")
+\dontshow{\}) # examplesIf}
 }

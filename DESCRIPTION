@@ -1,17 +1,19 @@
 Package: tidychem
-Type: Package
 Title: Tidy Chemical Data
 Version: 0.1.0
-Authors@R: c(person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre"),
-    comment = c(ORCID = "0000-0002-0250-5673")))
+Authors@R: c(
+    person("Nan", "Xiao", email = "me@nanx.me", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0002-0250-5673"))
+    )
 Maintainer: Nan Xiao <me@nanx.me>
 Description: Read, preprocess, and featurize chemical data using 'RDKit'.
 License: GPL-3
-VignetteBuilder: knitr
 URL: https://nanx.me/tidychem/, https://github.com/nanxstats/tidychem/
 BugReports: https://github.com/nanxstats/tidychem/issues
 Encoding: UTF-8
-LazyData: true
+SystemRequirements: Python (>= 3.6.0), rdkit (>=2022.9.5).
+    Detailed installation instructions can be found in the README file.
+VignetteBuilder: knitr
 Imports:
     methods,
     Matrix,

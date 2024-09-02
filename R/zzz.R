@@ -8,5 +8,6 @@
 rdkit <- NULL
 
 .onLoad <- function(libname, pkgname) {
+  reticulate::use_virtualenv("r-rdkit", required = FALSE)
   rdkit <<- reticulate::import("rdkit", delay_load = TRUE)
 }

@@ -43,7 +43,8 @@ reference:
     desc: >
       Utility functions.
     contents:
-      - tidychem-package
+      - install_rdkit
+      - is_installed_rdkit
+      - rdkit
       - tidychem_example
       - rdkit_version
-      - rdkit

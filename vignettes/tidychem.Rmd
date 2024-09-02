@@ -32,30 +32,30 @@ library("tidychem")
 ```
 
 ```{r}
-mols <- "smi-multiple.smi" %>%
-  tidychem_example() %>%
+mols <- "smi-multiple.smi" |>
+  tidychem_example() |>
   read_smiles()
 
 # ECFP4
-mols %>% fp_morgan()
+mols |> fp_morgan()
 
 # similarity
-# mols %>% fp_morgan %>% sim_tanimoto
+# mols |> fp_morgan |> sim_tanimoto
 
 # matrix
-mols %>% fp_morgan(explicit = TRUE)
+mols |> fp_morgan(explicit = TRUE)
 ```
 
 ```{r}
-df <- "logd74.tsv" %>%
-  tidychem_example() %>%
+df <- "logd74.tsv" |>
+  tidychem_example() |>
   read_tsv()
 y <- df$logD7.4
-mols <- df$SMILES %>% parse_smiles()
+mols <- df$SMILES |> parse_smiles()
 mols
 
 # matrix of 2D/3D descriptors
-x <- mols %>% desc_2d()
+x <- mols |> desc_2d()
 x
 x[which(is.na(x))] <- 0
 ```

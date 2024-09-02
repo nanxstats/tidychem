@@ -14,14 +14,14 @@ Encoding: UTF-8
 SystemRequirements: Python (>= 3.6.0), rdkit (>=2022.9.5).
     Detailed installation instructions can be found in the README file.
 VignetteBuilder: knitr
+Depends: R (>= 4.1.0)
 Imports:
-    methods,
-    Matrix,
-    reticulate,
-    readr,
-    stringr,
     crayon,
-    magrittr
+    methods,
+    readr,
+    reticulate,
+    stringr,
+    Matrix
 Suggests:
     knitr,
     rmarkdown

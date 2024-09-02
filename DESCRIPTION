@@ -7,7 +7,7 @@ Authors@R: c(
     )
 Maintainer: Nan Xiao <me@nanx.me>
 Description: Read, preprocess, and featurize chemical data using 'RDKit'.
-License: GPL-3
+License: MIT + file LICENSE
 URL: https://nanx.me/tidychem/, https://github.com/nanxstats/tidychem/
 BugReports: https://github.com/nanxstats/tidychem/issues
 Encoding: UTF-8

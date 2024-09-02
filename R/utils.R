@@ -13,11 +13,8 @@ tidychem_example <- function(file) {
 #'
 #' @export rdkit_version
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' rdkit_version()
-#' }
 rdkit_version <- function() {
   rdkit$rdBase$rdkitVersion
 }

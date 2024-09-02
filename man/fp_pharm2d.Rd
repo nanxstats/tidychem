@@ -17,8 +17,7 @@ the set of chemical features feature defined by Gobbi and Poppinger (1998).}
 Compute 2D pharmacophore fingerprints.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
@@ -27,5 +26,5 @@ fp_pharm2d(mols)
 
 fp_pharm2d(mol, type = "gobbi")
 fp_pharm2d(mols, type = "gobbi")
-}
+\dontshow{\}) # examplesIf}
 }

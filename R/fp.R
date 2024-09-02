@@ -9,9 +9,7 @@
 #'
 #' @export fp_rdkit
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
@@ -21,8 +19,6 @@
 #' # get fingerprints matrix
 #' fp_rdkit(mol, explicit = TRUE)
 #' fp_rdkit(mols, explicit = TRUE)
-#' }
-
 fp_rdkit <- function(mols, explicit = FALSE) {
   fps <- sapply(mols, get_fp_rdkit, explicit)
   if (explicit) fps <- t(fps)
@@ -38,9 +34,7 @@ fp_rdkit <- function(mols, explicit = FALSE) {
 #'
 #' @export fp_maccs
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
@@ -50,8 +44,6 @@ fp_rdkit <- function(mols, explicit = FALSE) {
 #' # get fingerprints matrix
 #' fp_maccs(mol, explicit = TRUE)
 #' fp_maccs(mols, explicit = TRUE)
-#' }
-
 fp_maccs <- function(mols, explicit = FALSE) {
   fps <- sapply(mols, get_fp_maccs, explicit)
   if (explicit) fps <- t(fps)
@@ -70,16 +62,12 @@ fp_maccs <- function(mols, explicit = FALSE) {
 #'
 #' @export fp_atompair
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' fp_atompair(mol)
 #' fp_atompair(mols)
-#' }
-
 fp_atompair <- function(mols) {
   fps <- sapply(mols, get_fp_atompair)
   class(fps) <- c(class(fps), "tidyfps")
@@ -97,16 +85,12 @@ fp_atompair <- function(mols) {
 #'
 #' @export fp_torsion
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' fp_torsion(mol)
 #' fp_torsion(mols)
-#' }
-
 fp_torsion <- function(mols) {
   fps <- sapply(mols, get_fp_torsion)
   class(fps) <- c(class(fps), "tidyfps")
@@ -127,9 +111,7 @@ fp_torsion <- function(mols) {
 #'
 #' @export fp_morgan
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
@@ -148,8 +130,6 @@ fp_torsion <- function(mols) {
 #' # get fingerprints matrix
 #' fp_morgan(mol, radius = 1L, use_features = TRUE, explicit = TRUE)
 #' fp_morgan(mols, radius = 1L, use_features = TRUE, explicit = TRUE)
-#' }
-
 fp_morgan <- function(mols, radius = 2L, use_features = FALSE, explicit = FALSE) {
   # sanitize argument type
   radius <- as.integer(radius)
@@ -170,9 +150,7 @@ fp_morgan <- function(mols, radius = 2L, use_features = FALSE, explicit = FALSE)
 #'
 #' @export fp_pharm2d
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
@@ -181,8 +159,6 @@ fp_morgan <- function(mols, radius = 2L, use_features = FALSE, explicit = FALSE)
 #'
 #' fp_pharm2d(mol, type = "gobbi")
 #' fp_pharm2d(mols, type = "gobbi")
-#' }
-
 fp_pharm2d <- function(mols, type = c("default", "gobbi")) {
   type <- match.arg(type)
   fps <- sapply(mols, get_fp_pharm2d, type)
@@ -196,16 +172,12 @@ fp_pharm2d <- function(mols, type = c("default", "gobbi")) {
 #'
 #' @export fp_erg
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' fp_erg(mol)
 #' fp_erg(mols)
-#' }
-
 fp_erg <- function(mols) {
   fps <- sapply(mols, get_fp_erg)
   fps <- t(fps)
@@ -221,9 +193,7 @@ fp_erg <- function(mols) {
 #'
 #' @export fp_pattern
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
@@ -232,8 +202,6 @@ fp_erg <- function(mols) {
 #'
 #' fp_pattern(mol, explicit = TRUE)
 #' fp_pattern(mols, explicit = TRUE)
-#' }
-
 fp_pattern <- function(mols, explicit = FALSE) {
   fps <- sapply(mols, get_fp_pattern, explicit)
   if (explicit) fps <- t(fps)

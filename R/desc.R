@@ -4,14 +4,12 @@
 #'
 #' @export desc_2d
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' desc_2d(mol)
-#' desc_2d(mols)}
-
+#' desc_2d(mols)
 desc_2d <- function(mols) {
   desc_names_local <- get_alldesc_2d()
   if (setequal(desc_names_local, desc_names_2d)) {
@@ -46,14 +44,12 @@ desc_2d <- function(mols) {
 #'
 #' @export desc_3d
 #'
-#' @examples
-#' \dontrun{
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' desc_3d(mol)
-#' desc_3d(mols)}
-
+#' desc_3d(mols)
 desc_3d <- function(mols) {
   desc <- sapply(mols, get_desc_3d)
   desc <- t(desc)

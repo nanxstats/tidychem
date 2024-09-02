@@ -13,11 +13,10 @@ read_smiles(file)
 Read molecules from a SMILES file.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 read_smiles(tidychem_example("smi-single.smi"))
 read_smiles(tidychem_example("smi-multiple.smi"))
 read_smiles(tidychem_example("smi-single-noname.smi"))
 read_smiles(tidychem_example("smi-multiple-noname.smi"))
-}
+\dontshow{\}) # examplesIf}
 }

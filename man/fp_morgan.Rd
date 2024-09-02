@@ -24,8 +24,7 @@ Default is \code{FALSE}.}
 Compute Morgan fingerprints (circular fingerprints).
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
@@ -44,5 +43,5 @@ fp_morgan(mols, radius = 1L, use_features = TRUE)
 # get fingerprints matrix
 fp_morgan(mol, radius = 1L, use_features = TRUE, explicit = TRUE)
 fp_morgan(mols, radius = 1L, use_features = TRUE, explicit = TRUE)
-}
+\dontshow{\}) # examplesIf}
 }

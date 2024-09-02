@@ -13,12 +13,11 @@ parse_sdf(string)
 Parse molecules from SDF/MOL text block.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 str_single <- readr::read_file(tidychem_example("single.mol"))
 str_multiple <- readr::read_file(tidychem_example("5ht3ligs.sdf"))
 
 parse_sdf(str_single)
 parse_sdf(str_multiple)
-}
+\dontshow{\}) # examplesIf}
 }

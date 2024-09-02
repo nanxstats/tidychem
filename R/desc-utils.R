@@ -2,11 +2,8 @@
 #'
 #' @export get_alldesc_2d
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' get_alldesc_2d()
-#' }
 get_alldesc_2d <- function() {
   sapply(rdkit$Chem$Descriptors$descList, "[[", 1L)
 }

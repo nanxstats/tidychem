@@ -9,13 +9,9 @@
 #'
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' parse_smiles("Cc1ccccc1")
 #' parse_smiles(c("Cc1ccccc1", "CCN(CC)CC"))
-#' }
-
 print.tidymol <- function(x, ...) {
   k <- length(x)
   cat_sys("tidychem molecules: ", k, "\n")
@@ -34,9 +30,7 @@ print.tidymol <- function(x, ...) {
 #'
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
@@ -45,8 +39,6 @@ print.tidymol <- function(x, ...) {
 #'
 #' fp_topo(mol, explicit = TRUE)
 #' fp_topo(mols, explicit = TRUE)
-#' }
-
 print.tidyfps <- function(x, ...) {
   if (c("matrix") %in% class(x)) {
     cat_sys("tidychem fingerprints: ", nrow(x), " molecules \n")
@@ -70,16 +62,12 @@ print.tidyfps <- function(x, ...) {
 #'
 #' @export
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' mol <- parse_smiles("Cc1ccccc1")
 #' mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 #'
 #' desc_2d(mol)
 #' desc_2d(mols)
-#' }
-
 print.tidydesc <- function(x, ...) {
   cat_sys("tidychem descriptors: ", nrow(x), " molecules x ", ncol(x), " descriptors", "\n")
   str(x)

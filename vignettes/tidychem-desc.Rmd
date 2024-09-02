@@ -1,5 +1,5 @@
 ---
-title: "Calculate chemical descriptors with tidychem"
+title: "Calculate chemical descriptors"
 author: "Nan Xiao <<https://nanx.me>>"
 output:
   rmarkdown::html_vignette:
@@ -8,7 +8,7 @@ output:
     css: custom.css
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Calculate chemical descriptors with tidychem}
+  %\VignetteIndexEntry{Calculate chemical descriptors}
 ---
 
 ```{r, include=FALSE}
@@ -16,9 +16,12 @@ knitr::opts_chunk$set(
   comment = "#>",
   collapse = TRUE
 )
+
+run <- if (tidychem::is_installed_rdkit()) TRUE else FALSE
+knitr::opts_chunk$set(eval = run)
 ```
 
-```{r,eval=FALSE}
+```{r}
 library("tidychem")
 ```
 

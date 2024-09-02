@@ -15,8 +15,7 @@
 Print molecular fingerprints object.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
@@ -25,5 +24,5 @@ fp_topo(mols)
 
 fp_topo(mol, explicit = TRUE)
 fp_topo(mols, explicit = TRUE)
-}
+\dontshow{\}) # examplesIf}
 }

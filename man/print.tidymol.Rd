@@ -15,9 +15,8 @@
 Print parsed molecules object.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 parse_smiles("Cc1ccccc1")
 parse_smiles(c("Cc1ccccc1", "CCN(CC)CC"))
-}
+\dontshow{\}) # examplesIf}
 }

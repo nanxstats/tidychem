@@ -17,8 +17,7 @@ Compute the Daylight-like fingerprint based on
 hashing molecular subgraphs defined by RDKit.
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
@@ -28,5 +27,5 @@ fp_rdkit(mols)
 # get fingerprints matrix
 fp_rdkit(mol, explicit = TRUE)
 fp_rdkit(mols, explicit = TRUE)
-}
+\dontshow{\}) # examplesIf}
 }

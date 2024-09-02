@@ -16,8 +16,7 @@ Default is \code{FALSE}.}
 Compute MACCS keys as molecular fingerprints
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
@@ -27,5 +26,5 @@ fp_maccs(mols)
 # get fingerprints matrix
 fp_maccs(mol, explicit = TRUE)
 fp_maccs(mols, explicit = TRUE)
-}
+\dontshow{\}) # examplesIf}
 }

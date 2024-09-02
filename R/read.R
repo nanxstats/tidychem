@@ -6,15 +6,11 @@
 #'
 #' @export read_smiles
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' read_smiles(tidychem_example("smi-single.smi"))
 #' read_smiles(tidychem_example("smi-multiple.smi"))
 #' read_smiles(tidychem_example("smi-single-noname.smi"))
 #' read_smiles(tidychem_example("smi-multiple-noname.smi"))
-#' }
-
 read_smiles <- function(file) {
   file <- normalizePath(file)
   x <- readLines(file)
@@ -36,13 +32,9 @@ read_smiles <- function(file) {
 #'
 #' @export read_sdf
 #'
-#' @examples
-#' \dontrun{
-#'
+#' @examplesIf is_installed_rdkit()
 #' read_sdf(tidychem_example("single.mol"))
 #' read_sdf(tidychem_example("5ht3ligs.sdf"))
-#' }
-
 read_sdf <- function(file) {
   file <- normalizePath(file)
   x <- readr::read_file(file)

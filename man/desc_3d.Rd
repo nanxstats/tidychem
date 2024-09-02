@@ -18,10 +18,11 @@ process, there would be some small numerical differences in the
 calculated descriptors in each different run.
 }
 \examples{
-\dontrun{
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
 desc_3d(mol)
-desc_3d(mols)}
+desc_3d(mols)
+\dontshow{\}) # examplesIf}
 }

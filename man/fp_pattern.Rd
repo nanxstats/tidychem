@@ -16,8 +16,7 @@ Default is \code{FALSE}.}
 Compute pattern fingerprints, a topological fingerprint optimized for substructure screening
 }
 \examples{
-\dontrun{
-
+\dontshow{if (is_installed_rdkit()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 mol <- parse_smiles("Cc1ccccc1")
 mols <- read_smiles(tidychem_example("smi-multiple.smi"))
 
@@ -26,5 +25,5 @@ fp_pattern(mols)
 
 fp_pattern(mol, explicit = TRUE)
 fp_pattern(mols, explicit = TRUE)
-}
+\dontshow{\}) # examplesIf}
 }

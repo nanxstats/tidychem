@@ -2,7 +2,7 @@
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![R-CMD-check](https://github.com/nanxstats/tidychem/workflows/R-CMD-check/badge.svg)](https://github.com/nanxstats/tidychem/actions)
+[![R-CMD-check](https://github.com/nanxstats/tidychem/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/nanxstats/tidychem/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Read, preprocess, and featurize chemical data using RDKit.

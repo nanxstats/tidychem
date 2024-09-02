@@ -32,9 +32,9 @@ sim(fps1, metric = "tanimoto")
 sim(fps1, fps2, metric = "tanimoto")
 
 # or use pipes
-mols1 \%>\%
-  fp_maccs() \%>\%
+mols1 |>
+  fp_maccs() |>
   sim("tanimoto")
-(mols1 \%>\% fp_maccs()) \%>\% sim(mols2 \%>\% fp_maccs(), "tanimoto")
+(mols1 |> fp_maccs()) |> sim(mols2 |> fp_maccs(), "tanimoto")
 \dontshow{\}) # examplesIf}
 }

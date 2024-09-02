@@ -28,9 +28,9 @@ reticulate::use_python("/usr/local/bin/python3")
 
 library("tidychem")
 
-"smi-multiple.smi" %>%
-  tidychem_example() %>%
-  read_smiles() %>%
+"smi-multiple.smi" |>
+  tidychem_example() |>
+  read_smiles() |>
   fp_morgan()
 ```
 

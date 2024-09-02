@@ -27,8 +27,6 @@ Let's load the package:
 
 ```{r}
 library("tidychem")
-library("magrittr")
-library("readr")
 ```
 
 ## Classification example

@@ -19,8 +19,7 @@ Imports:
     crayon,
     methods,
     readr,
-    reticulate,
-    stringr
+    reticulate
 Suggests:
     knitr,
     rmarkdown

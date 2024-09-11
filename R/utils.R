@@ -20,8 +20,7 @@ rdkit_version <- function() {
 }
 
 # count the number of molecules in the SDF text block
-#' @importFrom stringr str_count
-count_mol_sdf <- function(x) str_count(x, "M  END")
+count_mol_sdf <- function(x) str_count(x, pattern = "M  END")
 
 # parse molecule from a SMILES string
 mol_from_smiles <- function(x) rdkit$Chem$MolFromSmiles(as.character(x))
@@ -32,3 +31,9 @@ cat_sys <- function(...) cat(crayon::green(paste0(...), sep = ""))
 
 # setdiff without worrying about x, y order
 set_diff <- function(x, y) setdiff(union(x, y), intersect(x, y))
+
+# String operations
+str_count <- function(x, pattern) {
+  loc <- gregexpr(pattern = pattern, text = x, fixed = TRUE)
+  sapply(loc, function(x) length(attr(x, "match.length")))
+}
